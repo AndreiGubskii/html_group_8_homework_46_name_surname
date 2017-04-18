@@ -1,0 +1,47 @@
+$accent: #df1f26
+
+=linear-gradient($color1)  
+ background-image: linear-gradient(to bottom, lighten($color1, 10%) 0%, darken($color1, 10%) 100%)
+
+body
+	background: #eee
+	font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif
+.container 
+	max-width: 960px
+	width: 100%
+	margin: 0 auto
+
+.btn 
+	color: #fff
+	+linear-gradient($accent)
+	border-radius: 3px
+	display: inline-block
+	padding: 10px 20px
+	text-decoration: none
+	text-transform: uppercase
+.main 
+	display: flex
+
+.sidebar
+	width: 28%
+
+.content
+	width: 72%
+.product
+	position: relative
+	width: 33.3%
+.featured
+	width: 66.7%
+
+.product__label
+	position: absolute
+	top: 0
+	left: 0
+	width: 98px
+	height: 123px
+
+	&--exclusive
+		background: url(../images/label-exclusive.png) no-repeat
+	&--hot
+		background: url(../images/hot_label.png) no-repeat
+

@@ -1,0 +1,127 @@
+body {
+  background: #eee;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  color: #fff;
+  background-image: linear-gradient(to bottom, #e64b51 0%, #b2191e 100%);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  width: 28%;
+}
+
+.content {
+  width: 72%;
+}
+
+.product {
+  position: relative;
+  width: 33.3%;
+}
+
+.featured {
+  width: 66.7%;
+}
+
+.product__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98px;
+  height: 123px;
+}
+
+.product__label--exclusive {
+  background: url(../images/label-exclusive.png) no-repeat;
+}
+
+.product__label--hot {
+  background: url(../images/hot_label.png) no-repeat;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product {
+  background: #fff;
+  padding: 3px;
+  box-sizing: border-box;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.product img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product__name {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.menu_item {
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #404040;
+  padding: 11px 35px 15px 17px;
+  border-bottom: 1px solid #e3e3e4;
+  border-top: 1px solid #e1e2e2;
+}
+
+.menu_item:hover {
+  background: #fff;
+  box-shadow: inset -3px 0px 0px 0px #df1f26;
+}
+
+.menu_item:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding-right: 12px;
+  border-style: solid;
+  border-width: 5.5px 0 5.5px 6px;
+  border-color: transparent transparent transparent #e8e681;
+}
+
+.menu_title {
+  background-color: #df1f26;
+  color: #eee;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  margin: 0;
+}

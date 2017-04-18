@@ -1,0 +1,23 @@
+extends layaut.pug
+mixin products_block(products_array)
+  .products
+    each item in products_array
+      -var clasname = "product";
+      if item.featured
+        -clasname+=" featured";
+      div(class=clasname)
+        a(href="#").product_image 
+        if item.tags
+        - var classes = "product__label--";
+        each tag in item.tags
+          if item.tags!="featured"
+            -classes+=item.tags
+            span(class= classes).product__label
+        img(src=`uploads/${item.image}.jpg`, width="210", height="202", alt="Product image") 
+        h4.product__name= item.title
+        span.product__price= '$' + item.price
+        a(href="#").btn get it
+block content
+  +products_block(products)
+  h2 Popular products now
+  +products_block(popular_products)
